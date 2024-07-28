@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "plant-seedlings"
+version = "0.1.0"
+description = ""
+authors = ["brtenorio <b.nunes.bruno@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
