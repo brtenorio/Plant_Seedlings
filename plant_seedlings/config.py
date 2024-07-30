@@ -24,5 +24,5 @@ image_resize = 224
 batch_size_training = 8
 batch_size_validation = 8
 
-num_epochs = 8
+num_epochs = 5
 
