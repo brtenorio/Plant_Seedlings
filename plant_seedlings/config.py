@@ -21,8 +21,8 @@ num_classes = 12
 
 image_resize = 224
 
-batch_size_training = 8
-batch_size_validation = 8
+batch_size_training = 16
+batch_size_validation = 16
 
 num_epochs = 5
 

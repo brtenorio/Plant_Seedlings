@@ -26,6 +26,8 @@ def train_vgg():
 
     model_vgg.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
+    train_generator.reset()
+    validation_generator.reset()
     model_vgg.fit(train_generator,
                     steps_per_epoch=steps_per_epoch_training,
                     epochs=num_epochs,

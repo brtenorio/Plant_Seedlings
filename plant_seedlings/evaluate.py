@@ -4,11 +4,13 @@ from train_cnn import *
 
 def evaluate_cnn():
     model = train_cnn() 
+    test_generator.reset()
     eval = model.evaluate(test_generator)
     return eval
 
 def evaluate_vgg():
-    model = train_vgg() 
+    model = train_vgg()
+    test_generator.reset()
     eval = model.evaluate(test_generator)
     return eval
 
