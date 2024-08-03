@@ -1,7 +1,7 @@
 import os
 import shutil
 from sklearn.model_selection import train_test_split
-from config import *
+from plant_seedlings.config import *
 
 def create_dir():
 	if os.path.isdir(file_path):
@@ -35,7 +35,7 @@ def create_dir():
 					for img in test_imgs:
 						shutil.copy(os.path.join(class_path, img), os.path.join(test_dir, class_dir, img))
 	else:
-		print("data set unavailable")
+		raise Exception("data set directory not found!")
 
 if __name__ == "__main__":
 	create_dir()

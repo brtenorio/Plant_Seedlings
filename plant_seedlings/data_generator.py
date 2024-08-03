@@ -1,8 +1,8 @@
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from keras.applications.vgg19 import preprocess_input
-from config import *
+from keras.preprocessing.image import ImageDataGenerator
+from keras.applications.vgg16 import preprocess_input
+from plant_seedlings.config import *
 
-# instantiate the image data generator
+# Instantiate the image data generator
 data_generator = ImageDataGenerator(preprocessing_function=preprocess_input)
 
 train_generator = data_generator.flow_from_directory(
@@ -32,5 +32,8 @@ test_generator = data_generator.flow_from_directory(
 
 steps_per_epoch_training = len(train_generator)
 steps_per_epoch_validation = len(validation_generator)
+
+# Optionally, the number of classes could be extracted automatically from data_generator
+#num_classes = train_generator.num_classes
 
 print(steps_per_epoch_training,steps_per_epoch_validation)
