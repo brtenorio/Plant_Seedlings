@@ -6,12 +6,6 @@ rs = 42
 # set the path for the data base containing the images
 file_path = "/Users/brncat/Downloads/AltaVerde/GitHub/seeds_db/"
 
-#check existence of the dataset path
-if os.path.isdir(file_path):
-    print("data set found!")
-else:
-    raise Exception("data set directory not found!")
-
 # Define paths
 main_dir = os.path.join(file_path,'main')
 train_dir = os.path.join(file_path,'train')

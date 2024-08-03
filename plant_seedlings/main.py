@@ -2,7 +2,7 @@ if __name__=="__main__":
     """
     Run this script if you want to retrain the model and persist a new model.keras file
     """
-    from plant_seedlings.data_generator import test_generator
+    from plant_seedlings.data_generator import * 
     from plant_seedlings.train_model import train_model
     from plant_seedlings.get_model import get_model
     from plant_seedlings.evaluate_model import evaluate_model

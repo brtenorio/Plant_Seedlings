@@ -19,13 +19,29 @@ install:
 	@echo "Installing dependencies..."
 	$(POETRY) install
 
+run:
+	@echo "Running the application..."
+	$(POETRY) run streamlit run application/app.py --server.port 8080
+
 test:
 	@echo "Running tests..."
 	$(POETRY) run pytest -v tests/test.py
 
-run:
-	@echo "Running the application..."
-	$(POETRY) run streamlit run app/app.py
+retrain-model:
+	@echo "Retrain and regenerate model file"
+	$(POETRY) run python3 plant_seedlings/main.py
+
+docker-build:
+	@echo "Building Docker image..."
+	docker-compose build
+
+docker-run:
+	@echo "Running application in Docker..."
+	docker-compose up app
+
+docker-test:
+	@echo "Running tests in Docker..."
+	docker-compose run test
 
 # poetry cache clear --all .
 clean:

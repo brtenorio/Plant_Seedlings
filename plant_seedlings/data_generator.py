@@ -2,6 +2,12 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.applications.vgg16 import preprocess_input
 from plant_seedlings.config import *
 
+#check existence of the dataset path: file_path
+if os.path.isdir(file_path):
+    print("data set found!")
+else:
+    raise Exception("data set directory not found!")
+
 # Instantiate the image data generator
 data_generator = ImageDataGenerator(preprocessing_function=preprocess_input)
 
